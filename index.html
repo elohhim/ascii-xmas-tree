@@ -29,19 +29,20 @@
       }
     }
     .at-blink {
+      will-change: color;
       animation: blink-rgb-cmy 6s infinite;
     }
 
     @keyframes snowflake-fall {
       0% {
-        top: -10px;
+        transform: translate3d(-10vh, 0, 0);
       }
       100% {
-        top: 95%;
-        transform: translateX(calc(var(--drift) * 1px));
+        transform: translate3d(calc(var(--drift) * 1px), 100vh, 0);
       }
     }
     .snowflake {
+      will-change: transform;
       position: absolute;
       color: lightblue;
       animation: snowflake-fall calc(10s + calc(var(--variance) * 1s)) linear;
