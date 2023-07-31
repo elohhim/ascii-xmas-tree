@@ -69,6 +69,7 @@
 <footer class="text-white mt-4 border-t border-green-600 text-center">
   <span role="img" aria-label="christmas tree">🎄</span> Merry Christmas! Created with <span role="img" aria-label="love">❤️</span> by <a href="https://github.com/elohhim/ascii-xmas-tree" class="text-green-600">elohhim</a>, using <a href="https://openai.com/blog/chatgpt/" class="text-green-600">ChatGPT</a>
 </footer>
+<button id="toggleSnow" onclick="toggleSnowAnimation()">Toggle Snow Animation</button>
 <div id="snowflake-container" class="fixed top-0 h-screen w-screen pointer-events-none"></div>
 
 <script>
@@ -104,6 +105,15 @@
     }
   });
   startSnowing();
+  let snowing = true;
+  function toggleSnowAnimation() {
+    if (snowing) {
+      stopSnowing();
+    } else {
+      startSnowing();
+    }
+    snowing = !snowing;
+  }
 </script>
 </body>
 </html>
