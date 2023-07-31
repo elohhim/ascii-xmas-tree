@@ -1,0 +1,17 @@
+// Function to toggle the snowing animation
+function toggleSnowAnimation() {
+  // Get the snowing animation element
+  var snowingAnimation = document.getElementById('snowflake-container');
+
+  // Check the current state of the animation
+  var currentState = window.getComputedStyle(snowingAnimation).animationPlayState;
+
+  // If the animation is currently running, pause it
+  if (currentState === 'running') {
+    snowingAnimation.style.animationPlayState = 'paused';
+  }
+  // If the animation is currently paused, run it
+  else if (currentState === 'paused') {
+    snowingAnimation.style.animationPlayState = 'running';
+  }
+}
